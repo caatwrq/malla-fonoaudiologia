@@ -52,9 +52,7 @@ function renderMalla() {
           } else {
             aprobados.add(ramo.nombre);
           }
-          // Guardar el conjunto de aprobados en localStorage como array
           localStorage.setItem("aprobados", JSON.stringify(Array.from(aprobados)));
-
           renderMalla();
         };
       }
