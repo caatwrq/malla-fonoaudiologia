@@ -44,6 +44,7 @@
 .ramo.aprobado {
   background-color: #fff9b0; /* amarillo pastel */
   text-decoration: line-through;
+  color: gray;
 }
 
 /* Ramos bloqueados */
@@ -51,4 +52,10 @@
   background-color: #ccc;
   cursor: not-allowed;
   pointer-events: none;
+  color: #666;
+}
+
+/* Efecto hover solo para ramos desbloqueados */
+.ramo:not(.bloqueado):hover {
+  background-color: #ffb6c1; /* rosado más fuerte */
 }
