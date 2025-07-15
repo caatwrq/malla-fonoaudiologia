@@ -20,7 +20,8 @@ h1 {
 }
 
 .ramo.aprobado {
-  background-color: #a3f7bf; /* verde menta */
+  background-color: #fff9b0
+; /* verde menta */
   text-decoration: line-through;
 }
 
