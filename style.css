@@ -1,1 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+}
 
+h1 {
+  text-align: center;
+  color: #0066cc;
+}
+
+.ramo {
+  background-color: #ffc0cb; /* rosado */
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.ramo.aprobado {
+  background-color: #a3f7bf; /* verde menta */
+  text-decoration: line-through;
+}
+
+.ramo.bloqueado {
+  background-color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
