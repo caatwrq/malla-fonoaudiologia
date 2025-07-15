@@ -16,7 +16,9 @@ const malla = [
   }
 ];
 
-const aprobados = new Set();
+// Cargar aprobados desde localStorage (si existe)
+const aprobados = new Set(JSON.parse(localStorage.getItem("aprobados")) || []);
+
 const container = document.getElementById("malla-container");
 
 function renderMalla() {
@@ -50,6 +52,9 @@ function renderMalla() {
           } else {
             aprobados.add(ramo.nombre);
           }
+          // Guardar el conjunto de aprobados en localStorage como array
+          localStorage.setItem("aprobados", JSON.stringify(Array.from(aprobados)));
+
           renderMalla();
         };
       }
