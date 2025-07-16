@@ -101,3 +101,24 @@ const malla = [
     ]
   }
 ];
+
+// ----------- CÓDIGO QUE DIBUJA LA MALLA EN LA PÁGINA ------------
+
+const container = document.getElementById("malla-container");
+
+malla.forEach((sem) => {
+  const semDiv = document.createElement("div");
+  semDiv.className = "semestre";
+  const titulo = document.createElement("h3");
+  titulo.textContent = sem.semestre;
+  semDiv.appendChild(titulo);
+
+  sem.ramos.forEach((ramo) => {
+    const ramoDiv = document.createElement("div");
+    ramoDiv.className = "ramo";
+    ramoDiv.textContent = ramo.nombre;
+    semDiv.appendChild(ramoDiv);
+  });
+
+  container.appendChild(semDiv);
+});
